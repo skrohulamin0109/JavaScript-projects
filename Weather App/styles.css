@@ -1,0 +1,155 @@
+* {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+.backgroudContainer {
+    background-image: url("./images/backgroundImages/atmosphere.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+}
+
+/* Left Container Styling */
+.leftContainer {
+    height: 100vh;
+    flex-grow: 1;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.leftData{
+
+  height: 15vh;
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.leftData .leftTemp{
+  font-family: sans-serif;
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.leftPlaceInfo h2{
+  font-family: sans-serif;
+  font-size: 2rem;
+}
+
+.leftPlaceInfo p{
+  font-family: sans-serif;
+}
+
+.leftWeatherIcon{
+  font-size: 3rem;
+}
+
+/* Right Container Styling */
+.rightContainer {
+    height: 100vh;
+    width: 33%;
+    z-index: 1;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); /* Required for Safari support */
+    display: flex;
+    flex-direction: column;
+    padding: 50px 0 0 30px;
+}
+
+/* Search Bar Styling */
+
+
+
+.rightContainer input {
+    width: 50%;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    padding: 8px 0;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    color: #242323;
+    border-radius: 0; 
+    transition: border-bottom-color 0.2s ease-in-out;
+    margin-bottom: 50px;
+}
+
+input[type="text"]:focus {
+    outline: none; /* Removes default browser blue outline box */
+    border-bottom-color: #0077cc; /* Changes color of the underline when active */
+}
+
+input[type="text"]::placeholder {
+    color: #474545;
+    font-size: 1rem;
+}
+
+.searchBar{
+  display: flex;
+}
+
+.searchBar button{
+  width: 50px;
+  height: 30px;
+  background-color: transparent;
+  font-size: 2rem;
+}
+
+.searchBar button:hover{
+  scale: 1.2;
+  transition: all 0.2s;
+}
+
+.searchBar button:active{
+  scale: 1;
+}
+
+.rightWeatherData{
+  margin-bottom: 20px;
+}
+
+.rightWeatherData  h2 {
+  font-size: 2rem;
+  font-family: sans-serif;
+    color: #c1c1c1;
+    margin-bottom: 30px;
+}
+
+.rightWeatherDetails{
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 50px 0px 50px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.rightWeatherDetails p {
+    color: #ffffff;
+    font-size: .9rem;
+}
+
+.numberIcon{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+}
+
+.seperator{
+  margin-bottom: 30px;
+}
+
+
+
