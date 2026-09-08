@@ -1,0 +1,120 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(135deg, #f4afdf, #5a0333);
+    padding: 10px;
+}
+
+.todoApp {
+    width: 100%;
+    background-color: white;
+    max-width: 540px;
+    margin: 100px auto 40px;
+    padding: 40px 30px 70px;
+    border-radius: 30px;
+}
+
+.todoApp h2 {
+    color: rgb(11, 11, 62);
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.todoApp h2 img {
+    width: 30px;
+}
+
+.inputBox {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 50px;
+    border-radius: 50px;
+    background: #edeef0;
+    margin-bottom: 10px;
+}
+
+.inputBox input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 15px;
+    font-weight: 14px;
+}
+
+.inputBox button {
+    border: none;
+    outline: none;
+    padding: 16px 50px;
+    background: #1bb404;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 40px;
+}
+
+
+.listContainer{
+  background-color: #c6e2c2;
+  border-radius: 10px;
+}
+
+.listContainer li{
+  list-style: none;
+  display: flex;
+  padding: 10px 8px 10px 50px ;
+  align-items: center;
+  position: relative;
+  font-size: 16px;
+  user-select: none;
+  cursor: pointer;
+  transition: all .3s;
+}
+
+.listContainer li::before{
+  content: '';
+  display: block;
+  background-image: url('./images/unchecked.png');
+  background-position: center;
+  background-size: cover;
+  height: 15px;
+  width: 15px;
+  margin: 5px;
+}
+
+.listContainer li.checked{
+  text-decoration: line-through;
+   color: #555;
+}
+
+.listContainer li.checked::before {
+  background-image: url('./images/checked.png');
+}
+
+.listContainer li span {
+  position: absolute;
+  right: 20px;
+  font-size: 1.3rem;
+  width: 25px;
+  text-align: center;
+  border-radius: 50%;
+}
+
+.listContainer li span:hover{
+  background-color: #9e9e9e;
+  scale: 1.2;
+}
+
+.listContainer li span:active{
+  scale: 1;
+}
