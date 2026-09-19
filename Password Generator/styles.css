@@ -206,6 +206,20 @@ body {
     transform: translateX(-5px);
 }
 
+/* Copy Button shaking animation */
+#copyBtn.wrong {
+  animation: shake 0.3s ease-in-out;
+  background-color: rgb(226, 9, 9);
+}
+
+@keyframes shake {
+  0%   { transform: translateX(0); }
+  25%  { transform: translateX(-6px); }
+  50%  { transform: translateX(6px); }
+  75%  { transform: translateX(-6px); }
+  100% { transform: translateX(0); }
+}
+
 /*=========================
 Generate button
 ========================= */

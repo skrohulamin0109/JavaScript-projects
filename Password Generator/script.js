@@ -25,6 +25,11 @@ copyBtn.addEventListener("click", async () => {
     if (!isWeak & !isMedium & !isStrong) {
         passWordBox.value =
             "Generate a password first.";
+
+            copyBtn.classList.add('wrong')
+            setTimeout(()=>{
+                copyBtn.classList.remove('wrong')
+            }, 400)
         return;
     }
 
