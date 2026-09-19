@@ -1,0 +1,276 @@
+/* =========================
+   Reset
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    background: #0f172a;
+    color: #f8fafc;
+}
+
+/* =========================
+   Main Container
+========================= */
+
+.container {
+    width: 90%;
+    max-width: 600px;
+
+    padding: 40px;
+
+    background: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 20px;
+
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+}
+
+/* =========================
+   Heading
+========================= */
+
+.container > h1 {
+    font-size: 42px;
+    line-height: 1.1;
+    margin-bottom: 35px;
+}
+
+.container > h1 span {
+    color: #22c55e;
+}
+
+/* =========================
+   Password Type Section
+========================= */
+
+.passWordTypeBox {
+    margin-bottom: 30px;
+}
+
+.passWordTypeBox h2,
+.passWrodBox h2 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #cbd5e1;
+}
+
+/* =========================
+   Type Buttons
+========================= */
+
+.passWordTypeBox button {
+    padding: 11px 22px;
+    margin-right: 8px;
+
+    border: 1px solid #475569;
+    border-radius: 8px;
+
+    background: #334155;
+    color: #f8fafc;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.passWordTypeBox button:hover {
+    color: #052e16;
+}
+
+/* =========================
+    Weak Button
+========================= */
+.passWordTypeBox #Weak:hover {
+    background: #ef4444;
+    border-color: #ef4444;
+}
+.passWordTypeBox #Weak.weakActive {
+    background: #ef4444;
+    border-color: #ef4444;
+    transform: translateY(-5px) scale(1.1);
+}
+
+/* =========================
+    Medium Button]
+========================= */
+.passWordTypeBox #Medium:hover {
+    background: #facc15;
+    border-color: #facc15;
+}
+.passWordTypeBox #Medium.mediumActive {
+    background: #facc15;
+    border-color: #facc15;
+    transform: translateY(-5px) scale(1.1);
+}
+
+/* =========================
+    Strong Button
+========================= */
+.passWordTypeBox #Strong:hover {
+    background: #22c55e;
+    border-color: #22c55e;
+}
+.passWordTypeBox #Strong.strongActive {
+    background: #22c55e;
+    border-color: #22c55e;
+    transform: translateY(-5px) scale(1.1);
+}
+
+/* =========================
+   Generated Password
+========================= */
+
+.passWrodBox {
+    padding-top: 25px;
+    border-top: 1px solid #334155;
+}
+
+/* Password Input */
+
+#password {
+    width: calc(100% - 95px);
+
+    padding: 14px 16px;
+
+    border: 1px solid #475569;
+    border-radius: 8px 0 0 8px;
+
+    background: #0f172a;
+    color: #22c55e;
+
+    font-size: 16px;
+    font-family: monospace;
+
+    outline: none;
+    transition: border-color 0.4s ease-in-out;
+}
+
+#password:focus {
+    border-color: #22c55e;
+}
+
+/* =========================
+   Copy Button
+========================= */
+
+#copyBtn {
+    width: 90px;
+
+    padding: 14px 10px;
+
+    margin-left: -4px;
+
+    border: none;
+    border-radius: 0 8px 8px 0;
+
+    background: #9ea9a2;
+    color: #052e16;
+
+    font-size: 15px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease,
+        border-radius 0.2s ease;
+}
+
+#copyBtn:hover {
+    background: #def0e5;
+    transform: translate(5px, -5px);
+    border-radius: 50px;
+}
+
+#copyBtn:active {
+    transform: scale(0.96);
+    transform: translateX(-5px);
+}
+
+/*=========================
+Generate button
+========================= */
+
+.generateBtn {
+    width: 150px;
+
+    padding: 14px 10px;
+
+    margin-top: 20px;
+
+    border: none;
+    border-radius: 8px;
+
+    background: #61c522;
+    color: #052e16;
+
+    font-size: 15px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease,
+        border-radius 0.2s ease;
+}
+
+.generateBtn:hover {
+    background: #64d31f;
+    transform: translateY(-5px);
+    border-radius: 50px;
+}
+
+.generateBtn:active {
+    transform: scale(0.96);
+    transform: translateY(5px);
+}
+
+/* =========================
+   Mobile
+========================= */
+
+@media (max-width: 500px) {
+    .container {
+        padding: 25px;
+    }
+
+    .container > h1 {
+        font-size: 34px;
+    }
+
+    .passWordTypeBox button {
+        margin-bottom: 8px;
+    }
+
+    #password {
+        width: 100%;
+        border-radius: 8px;
+        margin-bottom: 10px;
+    }
+
+    #copyBtn {
+        width: 100%;
+        margin-left: 0;
+        border-radius: 8px;
+    }
+}

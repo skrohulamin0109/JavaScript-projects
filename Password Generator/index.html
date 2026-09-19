@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="styles.css" />
+        <title>Generate Password</title>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Generate <br /><span>Random Password</span></h1>
+            <div class="passWordTypeBox">
+                <h2>Choose Password Type</h2>
+                <button data-pass-type="weak" id="Weak">Weak</button>
+                <button data-pass-type="medium" id="Medium">Medium</button>
+                <button data-pass-type="strong" class=".strongActive" id="Strong">Strong</button>
+            </div>
+
+            <div class="passWrodBox">
+                <h2>Generated Password</h2>
+                <input type="text" id="password" readonly />
+                <button id="copyBtn">Copy</button>
+            </div>
+            <button class="generateBtn">Generate</button>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>
