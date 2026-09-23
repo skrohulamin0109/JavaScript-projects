@@ -1,0 +1,74 @@
+.epic-glow-background {
+    /* 1. The Image/Gradient Layers (8 separate layers stacked together) */
+    background-image: 
+        radial-gradient(circle at top left, #312e81, transparent 40%),
+        radial-gradient(circle at bottom right, #0e7490, transparent 40%),
+        linear-gradient(to right, rgba(255,255,255,0.03) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255,255,255,0.03) 1px, transparent 1px),
+        conic-gradient(from 90deg at 50% 50%, #4f46e5, transparent 60%),
+        repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(0,0,0,0.1) 10px, rgba(0,0,0,0.1) 20px),
+        radial-gradient(circle at 50% 30%, #ec4899, transparent 20%),
+        url('noise-texture.png');
+
+    /* 2. Positions for each layer, mapped in order */
+    background-position: 
+        0% 0%,       /* Top left glow */
+        100% 100%,   /* Bottom right glow */
+        0px 0px,     /* Grid lines X */
+        0px 0px,     /* Grid lines Y */
+        50% 50%,     /* Center conic flare */
+        center,      /* Diagonal stripes */
+        50% 30%,     /* Pink ambient dot */
+        0 0;         /* Noise texture */
+
+    /* 3. Sizes for each layer */
+    background-size: 
+        100% 100%,   
+        100% 100%,   
+        40px 40px,   /* Grid width */
+        40px 40px,   /* Grid height */
+        600px 600px, 
+        auto,        
+        80% 80%,     
+        200px 200px; /* Repeating noise size */
+
+    /* 4. Repeat rules for each layer */
+    background-repeat: 
+        no-repeat,
+        no-repeat,
+        repeat,      /* Repeat the grid */
+        repeat,      /* Repeat the grid */
+        no-repeat,
+        repeat,
+        no-repeat,
+        repeat;      /* Repeat the noise texture */
+
+    /* 5. Blending modes for complex color interactions */
+    background-blend-mode: 
+        screen, 
+        screen, 
+        normal, 
+        normal, 
+        color-dodge, 
+        multiply, 
+        overlay, 
+        soft-light;
+
+    /* 6. Origins (where the background coordinates start) */
+    background-origin: 
+        padding-box, padding-box, padding-box, padding-box,
+        content-box, content-box, content-box, border-box;
+
+    /* 7. Clips (where the background gets cut off) */
+    background-clip: 
+        border-box, border-box, border-box, border-box,
+        content-box, content-box, content-box, border-box;
+
+    /* 8. Attachment behaviors (scroll or fixed) */
+    background-attachment: 
+        scroll, scroll, scroll, scroll,
+        fixed, fixed, scroll, scroll;
+
+    /* 9. The Base Solid Color (Always goes underneath all layers) */
+    background-color: #020617;
+}
