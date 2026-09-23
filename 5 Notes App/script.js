@@ -40,3 +40,23 @@ notesContainer.addEventListener("click", (e) => {
         };
     }
 });
+
+notesContainer.addEventListener("keydown", (e) => {
+    if (e.key === "Enter" && e.target.matches('[contenteditable="true"]')) {
+        e.preventDefault();
+
+        const selection = window.getSelection();
+        const range = selection.getRangeAt(0);
+
+        const br = document.createElement("br");
+
+        range.deleteContents();
+        range.insertNode(br);
+
+        range.setStartAfter(br);
+        range.collapse(true);
+
+        selection.removeAllRanges();
+        selection.addRange(range);
+    }
+});
