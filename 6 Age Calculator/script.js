@@ -10,6 +10,11 @@ function calculateAge() {
     let m1 = birthDate.getMonth() + 1;
     let y1 = birthDate.getFullYear();
 
+    if(!d1 || !m1 || !y1 ){
+         result.innerHTML = `please enter a valid date of birth.`;
+         return;
+    }
+
     let today = new Date();
 
     let d2 = today.getDate();
